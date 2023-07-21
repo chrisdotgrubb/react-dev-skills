@@ -1,5 +1,10 @@
-export default function SkillListItem() {
+import './SkillListItem.css'
+import SkillListItemLevel from "./SkillListItemLevel";
+
+export default function SkillListItem({skill, idx}) {
     return (
-        <li>SkillListItem</li>
+        <li className={'SkillListItem'}>
+            {skill.name} <SkillListItemLevel level={skill.level}/>
+        </li>
     )
 }
